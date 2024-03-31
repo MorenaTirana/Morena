@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="Morena Tirana is an Albanian front-end developer based in 
+    Stockholm, Sweden. 
+    Check out her projects and contact her for job inquiries"
+    />
+    <title>Front-end developer - Morena Tirana</title>
+
+    <!----Google Fonts---->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Playfair+Display:wght@700&family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!----Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Playfair+Display:wght@700&family=Poppins:wght@500;700&display=swap');
+
+      :root {
+        --primary-color: #6c63ff;
+        --secondary-color: #f5f2fe;
+        --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      body {
+        margin: 100px 0;
+        background-color: red;
+        color: #fff;
+   
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 96px;
+      }
+
+      h2 {
+        font-size: 48px;
+      }
+
+      h3 {
+        font-size: 20px;
+        opacity: 0.8;
+        padding: 0 20px;
+        font-family: 'La Belle Aurore', cursive;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      .navigation-links {
+        display: flex;
+        margin-top: 40px;
+        justify-content: center;
+      }
+
+      .navigation-links a {
+        margin: 20px;
+      }
+      .col-sm-6 img{
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .primary-link {
+        border-radius: 4px;
+        padding: 20px 15px;
+        text-decoration: none;
+        text-transform: capitalize;
+        background: #000;
+        box-shadow: var(--box-shadow);
+        color: white;
+        box-shadow: 4px 4px 10px 4px #fff;
+      }
+
+      .primary-link:hover {
+        color: #000;
+        background-color: white;
+      }
+
+      .secondary-link {
+        border-radius: 4px;
+        padding: 20px 15px;
+        text-decoration: none;
+        text-transform: capitalize;
+        color: #fff;
+
+        box-shadow: 4px 4px 10px 4px #fff;
+      }
+
+      .secondary-link:hover {
+        color: #000;
+        background-color: #fff;
+      }
+      .homepage-link {
+        color: var(--primary-color);
+        text-align: center;
+        display: block;
+      }
+
+      .about-paragraphs {
+        margin: 30px 0;
+      }
+
+      .about-paragraphs p {
+        margin: 10px;
+      }
+
+      .project-link:hover {
+        color: #000;
+        background-color: #f5f2fe;
+      }
+
+      .email-link {
+        display: flex;
+        justify-content: center;
+        color: var(--primary-color);
+        font-size: 28px;
+        text-decoration: none;
+      }
+
+      .email-link:hover {
+        text-decoration: underline;
+      }
+
+      .name {
+        font-weight: bold;
+        color: #6c63ff;
+      }
+
+      .col-sm-6 {
+        margin-bottom: 50px;
+      }
+      .footer {
+        display: flex;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100%;
+        margin-bottom: -30%;
+        justify-content: center;
+        font-size: 15px;
+        box-shadow: 10px 1px 10px #9681d3;
+      }
+
+      .purple {
+        color: #6c63ff;
+        font-weight: bold;
+      }
+
+      @media (max-width: 576px) {
+        h1 {
+          font-size: 48px;
+          line-height: 1.5;
+        }
+
+        h2 {
+          font-size: 32px;
+          text-align: center;
+        }
+
+        p {
+          text-align: center;
+          font-size: 15px;
+        }
+
+        .project-link {
+          display: block;
+          text-align: center;
+          margin: 0 20px;
+        }
+      }
+
+      @media (max-width: 375px) {
+        .navbar {
+          max-width: 100%;
+        }
+        h3 {
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <div class="name">
+          <a class="navbar-brand" id="name" href="index.html">
+            Morena Tirana
+          </a>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="sheCodesPortf.html"
+                tilte="Homepage"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html" title="About Morena Tirana"
+                >About me</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="about.html#contact"
+                title="Contact Morena Tirana"
+                >Contact me</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <h2 class="text-center">👋 Hi, I am</h2>
+    <h1 class="text-center">Morena Tirana</h1>
+    <h3 class="text-center">
+      🇦🇱 Front-end developer, based in Stockholm, Sweden 🇸🇪
+    </h3>
+
+    <div class="navigation-links mb-5">
+      <a
+        href="about.html#contact"
+        class="primary-link"
+        title="Contact Morena Tirana"
+        >Contact me</a
+      >
+      <a href="about.html" class="secondary-link" title="About Morena Tirana"
+        >About me</a
+      >
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <img
+            src="img/yoga.png"
+            alt="Yoga project "
+            class="img-fluid rounded d-none d-sm-block"
+          />
+        </div>
+        <div class="col-sm-6">
+          <h2 class="mb-3">Yoga app</h2>
+          <p>The first project made with SheCodes was a Yoga App.</p>
+          <div class="mt-5">
+            <a href="#" class="primary-link project-link" title="Yoga project"
+              >Launch Yoga App</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5 ">
+        <div class="col-sm-6">
+          <h2 class="mb-3">Weather app</h2>
+          <p>
+            The second project with SheCodes was the Weather App. This app tells
+            you the weather in the place you search for and also gives you the
+            opportunity to know the weather in your location
+          </p>
+          <div class="mt-5">
+            <a
+              href="weatherApp.html"
+              class="primary-link project-link"
+              title="Weather project"
+              >Launch Weather App</a
+            >
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <img
+            src="img/weather.png"
+            class="img-fluid rounded d-none d-sm-block"
+            alt="Weather project"
+          />
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-sm-6">
+          <img
+            src="img/yougurtApp.png"
+            class="img-fluid rounded d-none d-sm-block"
+            alt="Yogurt project"
+          />
+        </div>
+        <div class="col-sm-6">
+          <h2 class="mb-3">Yogurt app</h2>
+          <p>
+            Yogurt App is the 3rd project I did with SheCodes. It doesn'do much
+            but it was a cool project.
+          </p>
+          <div class="mt-5">
+            <a
+              href="yogurtApp.html"
+              class="primary-link project-link"
+              title="Weather project"
+              >Launch Yogurt App</a
+            >
+          </div>
+        </div>
+      </div>
+        <div class="row mt-5">
+          <div class="col-sm-6">
+            <h2 class="mb-3">Croissant app</h2>
+            <p>The last project was building a Croissant app with SEO setup.</p>
+            <div class="mt-5">
+              <a
+                href="croissant.html"
+                class="primary-link project-link"
+                title="Croissant project"
+                >Launch Croissant App</a
+              >
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <img
+              src="img/croissant-1.png"
+              class="img-fluid rounded d-none d-sm-block"
+              alt="Croissant project"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      Made with L❤️VE by
+      <span class="purple">&nbsp; Morena Tirana</span>
+    </footer>
+  </body>
+</html>

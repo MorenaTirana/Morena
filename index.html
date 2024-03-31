@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Morena Tirana | Home Page</title>
+
+    <!--Certificates Bootstrap-->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+     <!-- Contact Form Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
+     rel="stylesheet" 
+     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" 
+     crossorigin="anonymous">
+
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        
+    #certificates{
+        margin-top: 30px;
+    }
+.certificate-container {
+  position: relative;
+  width: 1160px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  margin: auto;
+}
+.certificate-title h1{
+   text-align: center;
+   height:50px;
+   font-size: 50px;
+   font-weight: 300;
+}
+.certificate-title .separator{
+    width: 310px;
+}
+.certificate-container .box {
+  position: relative;
+  width: 400px;
+  height: 275px;
+  background: red;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  margin-right: 15px;
+  margin-top: 45px;
+}
+.certificate-container:hover .box {
+  transform: rotateY(25deg);
+}
+.certificate-container .box:hover ~ .box {
+  transform: rotateY(-25deg);
+}
+.certificate-container .box:hover {
+  transform: rotateY(0deg) scale(1.1);
+  z-index: 1;
+  box-shadow: 0 25px 40px #fff;
+}
+.certificate-container .box .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.certificate-container .box .imgBx:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,#d5be8b,#000);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+  mix-blend-mode: multiply;
+}
+.certificate-container .box:hover .imgBx:before {
+  opacity: 1;
+}
+.certificate-container .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 10px 10px;
+  background-color: #d5be8b;
+}
+.certificate-container .box .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  padding: 20px;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+.certificate-container .box .content h2 {
+  color: #fff;
+  transition: 0.5s;
+  margin-bottom: 20px;
+  font-size: 20px;
+  transform: translateY(200px);
+  transition-delay: 0.3s;
+}
+.certificate-container .box:hover .content h2 {
+  transform: translateY(0px);
+}
+.certificate-container .box .content p {
+  color: #fff;
+  transition: 0.5s;
+  font-size: 14px;
+  transform: translateY(200px);
+  transition-delay: 0.4s;
+}
+.certificate-container .box:hover .content p {
+  transform: translateY(0px);
+}
+
+ /***** Hera *****/
+      /*-----------------*
+
+      *,
+      *:after,
+      *:before {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      .clearfix:before,
+      .clearfix:after {
+        display: table;
+        content: '';
+      }
+      .clearfix:after {
+        clear: both;
+      }
+
+    
+
+      a {
+        outline: none;
+        color: #3498db;
+        text-decoration: none;
+      }
+
+      a:hover,
+      a:focus {
+        color: #528cb3;
+      }
+
+      section {
+        padding: 1em;
+        text-align: center;
+      }
+
+      .content {
+        margin: 0 auto;
+        max-width: 1000px;
+      }
+
+      .content > h2 {
+        clear: both;
+        margin: 0;
+        padding: 4em 1% 0;
+        color: #484b54;
+        font-weight: 800;
+        font-size: 1.5em;
+      }
+
+      .content > h2:first-child {
+        padding-top: 0em;
+      }
+
+      /* Header *
+      .codrops-header {
+        margin: 0 auto;
+        padding: 4em 1em;
+        text-align: center;
+      }
+
+      .codrops-header h1 {
+        margin: 0;
+        font-weight: 800;
+        font-size: 4em;
+        line-height: 1.3;
+      }
+
+      .codrops-header h1 span {
+        display: block;
+        padding: 0 0 0.6em 0.1em;
+        color: #74777b;
+        font-weight: 300;
+        font-size: 45%;
+      }
+
+      /* Demo links *
+      .codrops-demos {
+        clear: both;
+        padding: 1em 0 0;
+        text-align: center;
+      }
+
+      .content + .codrops-demos {
+        padding-top: 5em;
+      }
+
+      .codrops-demos a {
+        display: inline-block;
+        margin: 0 5px;
+        padding: 1em 1.5em;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      .codrops-demos a:hover,
+      .codrops-demos a:focus,
+      .codrops-demos a.current-demo {
+        background: #3c414a;
+        color: #fff;
+      }
+
+      /* To Navigation Style *
+      .codrops-top {
+        width: 100%;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 0.69em;
+        line-height: 2.2;
+      }
+
+      .codrops-top a {
+        display: inline-block;
+        padding: 1em 2em;
+        text-decoration: none;
+        letter-spacing: 1px;
+      }
+
+      .codrops-top span.right {
+        float: right;
+      }
+
+      .codrops-top span.right a {
+        display: block;
+        float: left;
+      }
+
+      .codrops-icon:before {
+        margin: 0 4px;
+        text-transform: none;
+        font-weight: normal;
+        font-style: normal;
+        font-variant: normal;
+        font-family: 'codropsicons';
+        line-height: 1;
+        speak: none;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .codrops-icon-drop:before {
+        content: '\e001';
+      }
+
+      .codrops-icon-prev:before {
+        content: '\e004';
+      }
+
+      /* Related demos *
+      .related {
+        clear: both;
+        padding: 6em 1em;
+        font-size: 120%;
+      }
+
+      .related > a {
+        display: inline-block;
+        margin: 20px 10px;
+        padding: 25px;
+        border: 1px solid #4f7f90;
+        text-align: center;
+      }
+
+      .related a:hover {
+        border-color: #39545e;
+      }
+
+      .related a img {
+        max-width: 100%;
+        opacity: 0.8;
+      }
+
+      .related a:hover img,
+      .related a:active img {
+        opacity: 1;
+      }
+
+      .related a h3 {
+        margin: 0;
+        padding: 0.5em 0 0.3em;
+        max-width: 300px;
+        text-align: left;
+      }
+
+      /* Demo ad design *
+      body #cdawrap {
+        background: none;
+        top: 50px;
+        border: none;
+      }
+
+      body #cdawrap a {
+        color: #fff !important;
+      }
+
+      body #cda-remove {
+        color: #fff;
+      }
+
+      @media screen and (max-width: 25em) {
+        .codrops-header {
+          font-size: 75%;
+        }
+        .codrops-icon span {
+          display: none;
+        }
+      }
+      .grid {
+        position: relative;
+        clear: both;
+        margin: 0 auto;
+        padding: 1em 0 4em;
+        max-width: 1000px;
+        list-style: none;
+        text-align: center;
+      }
+
+      /* Common style *
+      .grid figure {
+        position: relative;
+        float: left;
+        overflow: hidden;
+        margin: 10px 1%;
+        min-width: 320px;
+        max-width: 480px;
+        max-height: 360px;
+        width: 48%;
+        height: auto;
+        background: #3085a3;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .grid figure img {
+        position: relative;
+        display: block;
+        min-height: 100%;
+        max-width: 100%;
+        opacity: 0.8;
+      }
+
+      .grid figure figcaption {
+        padding: 2em;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.25em;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+
+      .grid figure figcaption::before,
+      .grid figure figcaption::after {
+        pointer-events: none;
+      }
+
+      .grid figure figcaption,
+      .grid figure figcaption > a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      /* Anchor will cover the whole item by default */
+      /* For some effects it will show as a button *
+      .grid figure figcaption > a {
+        z-index: 1000;
+        text-indent: 200%;
+        white-space: nowrap;
+        font-size: 0;
+        opacity: 0;
+      }
+
+      .grid figure h2 {
+        word-spacing: -0.15em;
+        font-weight: 300;
+      }
+
+      .grid figure h2 span {
+        font-weight: 800;
+      }
+
+      .grid figure h2,
+      .grid figure p {
+        margin: 0;
+      }
+
+      .grid figure p {
+        letter-spacing: 1px;
+        font-size: 68.5%;
+      }
+
+      figure.effect-hera {
+        background: #303fa9;
+      }
+
+      figure.effect-hera h2 {
+        font-size: 158.75%;
+      }
+
+      figure.effect-hera h2,
+      figure.effect-hera p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(-50%, -50%, 0);
+        -webkit-transform-origin: 50%;
+        transform-origin: 50%;
+      }
+
+      figure.effect-hera figcaption::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        border: 2px solid #fff;
+        content: '';
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg)
+          scale3d(0, 0, 1);
+        transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg)
+          scale3d(0, 0, 1);
+        -webkit-transform-origin: 50%;
+        transform-origin: 50%;
+      }
+
+      figure.effect-hera p {
+        width: 100px;
+        text-transform: none;
+        font-size: 351%;
+        line-height: 2;
+      }
+
+      figure.effect-hera p a {
+        color: #fff;
+      }
+
+      figure.effect-hera p a:hover,
+      figure.effect-hera p a:focus {
+        opacity: 0.6;
+      }
+
+      figure.effect-hera p a i {
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+      }
+
+      figure.effect-hera p a:first-child i {
+        -webkit-transform: translate3d(-60px, -60px, 0);
+        transform: translate3d(-60px, -60px, 0);
+      }
+
+      figure.effect-hera p a:nth-child(2) i {
+        -webkit-transform: translate3d(60px, -60px, 0);
+        transform: translate3d(60px, -60px, 0);
+      }
+
+      figure.effect-hera p a:nth-child(3) i {
+        -webkit-transform: translate3d(-60px, 60px, 0);
+        transform: translate3d(-60px, 60px, 0);
+      }
+
+      figure.effect-hera p a:nth-child(4) i {
+        -webkit-transform: translate3d(60px, 60px, 0);
+        transform: translate3d(60px, 60px, 0);
+      }
+
+      figure.effect-hera:hover figcaption::before {
+        opacity: 1;
+        -webkit-transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg)
+          scale3d(1, 1, 1);
+        transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg)
+          scale3d(1, 1, 1);
+      }
+
+      figure.effect-hera:hover h2 {
+        opacity: 0;
+        -webkit-transform: translate3d(-50%, -50%, 0) scale3d(0.8, 0.8, 1);
+        transform: translate3d(-50%, -50%, 0) scale3d(0.8, 0.8, 1);
+      }
+
+      figure.effect-hera:hover p i:empty {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(
+          0,
+          0,
+          0
+        ); /* just because it's stronger than nth-child *
+        opacity: 1;
+      }
+
+
+/*For iPhone 12 and 13 iPhone 13 mini */
+/* 2340x1080 pixels at 476ppi */
+  @media  (max-width: 375px) 
+
+    {
+        .brand{
+            margin-left: 1px;
+        }
+        .content h2{
+            font-family: cursive;
+        }
+        .hero-content{
+            margin-bottom:69%;
+        }
+        .hero-heading{
+            font-size: 40px;
+        }
+        .profession{
+            font-size: 15px;
+            margin-right: 35px;
+            margin-top: -10px;
+        }
+        .about{
+            margin-top: -60%;
+        }
+        .about-me-container{
+            margin-left: -10px;
+            padding: 20px 0;
+        }
+        .right-col{
+            margin-left: 10px;
+        }
+        .left-col button{
+            margin-left:33%;
+        }
+        .projects{
+            margin-top: -10%;
+        }
+        .product-container {
+            display: block;
+            margin-left: 20px;  
+        }
+        .product-card{
+            margin-bottom:20px;
+            border-radius: 10px;
+        }
+        #certificates{
+            align-items: center;
+        }
+        .certificate-container{
+            display: block;
+         margin-left: 20px;
+            width:50%;
+            margin-bottom: 70px;
+        }
+        .certificate-container .box{
+            width:250px;
+            margin-left: 40px;
+        }
+        .certificate-title h1{
+            margin-left: 10px;
+            font-size: 30px;
+        }
+        .certificate-title .separator{
+            margin-left:120px;
+            width:150px;
+        }
+        .certificate-container .box .imgBx img {
+            object-fit:contain;
+        }
+        .contact{
+            margin-top:-20%;
+        }
+        .contact-me{
+            text-align: center;
+            text-transform: uppercase;
+        }
+        #submit{
+            margin-left: 85px;
+        }
+        .social-links{
+            font-size: 30px;
+            gap:20px;
+        }
+        .social-links i{
+            color: #fff;
+        }
+        .social-links i:hover{
+            color: #000;
+        }
+      
+
+    }
+    /*
+    @media(max-width:500px){
+            #submit{
+           background-color: red;
+           margin-left:110px;
+            }
+            #submit:hover{
+                background-color: #fff;
+                color: black;
+                box-shadow: 10px 5px 10px red;
+            }
+
+        }
+        */
+
+    </style>
+
+</head>
+<body>
+   
+    <!-- navbar-->
+    <nav class="navbar" id="navbar">
+        <h1 class="brand">morena tirana</h1>
+        <div class="toggle-btn">
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="links-container">
+            <li class="links-item"><a href="#" class="link active">home</a></li>
+            <li class="links-item"><a href="#about-section" class="link">about</a></li>
+            <li class="links-item"><a href="#projects" class="link">projects</a></li>
+            <li class="links-item"><a href="#certificates" class="link">certificates</a></li>
+            <li class="links-item"><a href="#contact-section" class="link">contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- home section-->
+    <section class="home">
+        <div class="hero-content">
+            <h1 class="hero-heading">
+                <span class="highlight">Hi, I'm </span>
+                Morena</span>
+            </h1>
+            <p class="profession"> web developer</p>
+            <p class="info"></p>
+           
+        </div>
+        <img src="img/img1.png" class="image" alt="">
+    </section>
+
+    <!--- about section -->
+    <section class="about" id="about-section">
+        <h2 class="heading"><span class="highlight">about </span> me </span></h2>
+        <p class="sub-heading">Never stops learning!</p>
+        <div class="separator"></div>
+
+        <div class="about-me-container">
+            <div class="left-col">
+                <img src="img/CV.png" class="about-image" alt="My CV">
+                <button onclick="download()">Download CV</button>
+            </div>
+        
+            <div class="right-col">
+                <p> 
+                   Born in Durres, Albania 🇦🇱, raised up in Italy 🇮🇹, I 
+                   have lived in Amsterdam 🇳🇱, 2010 - 2011, Ibiza 🇪🇸, 2013, 
+                   Saudi Arabia 🇸🇦, 2015 - 2017, 
+                   and since 2017 I am based in Stockholm, Sweden 🇸🇪.
+                   Raising up in Italy was a blessing since Italy is not only
+                   one of the most beautiful countries in the world, but also because
+                   Italy provides a rich culture and education which did shape my 
+                   personality and cultural background. 
+                   Among all these countries I lived in, Saudi Arabia gave me the most 
+                   pleasant experience on a professional and human level because I worked 
+                   at the Italian School of Jeddah
+                   as Administrative Assistant and Technology Teacher of Grades 6, 7, and 8. 
+                   <br/> <br/>
+                    I studied Foreign Languages during my Lyceum (highschool) years 
+                   , Math Engineering at the Polytechnic 
+                   of Milan, and Software Engineering at the Arizona State University.
+                   Despite being a working student, the financial limitations
+                   faced  affected the achievement of my bachelor in due time. 
+                   So, now I still miss few exams from getting my Bachelor in Software Engineering. 
+                   In the meantime, my PASSION for coding has driven me to keep coding and 
+                   improve my coding skills every day more. 
+                   Coding is my passion and my dream is to work as a programmer. 
+                   <br/> <br/>
+                   Alongside with coding, I also love Art and History. 
+                   I love creativity in all ways and shapes. I dream of opening my own 
+                   Art gallery one day so I could see exposed all artists I love.
+                   I consider coding as a form of art combined with science. 
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+          <!---best selling products-->
+          
+    <section class="projects" id="projects">
+        <h2 class="heading"><span class="highlight">My </span> Projects </span></h2>
+        <div class="separator"></div>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="img/portf.png" class="product-img" alt="">
+                <p class="product-name">
+                    <a href="morena-tirana-sheCodes.html">
+                        Portfolio 1 
+                    </a>
+                </p>
+            </div>
+          <div class="product-card">
+            <img src="img/portfolio-2.png" class="product-img" alt="">
+            <p class="product-name">
+              <a href="sheCodesPortf.html">Portfolio 2</a>
+            </p>
+        </div>
+        <div class="product-card">
+            <img src="img/weatherImage.png" class="product-img" alt="">
+            <p class="product-name"><a href="weatherApp.html">Weather App</a></p>
+        </div>
+        <div class="product-card">
+            <img src="img/current-weather.png" class="product-img" alt="">
+            <p class="product-name"><a href="weather.html">Current Weather App</a></p>
+        </div>
+          <div class="product-card">
+            <img src="img/portfolio-landing.png" class="product-img" alt="">
+            <p class="product-name"><a href="portfolio-1a-solution.html">Portfolio Homepage</a></p>
+        </div>
+        <div class="product-card">
+            <img src="img/portfolio-landing.png" class="product-img" alt="">
+            <p class="product-name"><a href="e-commerce.html">E-Commerce</a></p>
+        </div>
+        
+        <!------
+        <div class="product-card">
+          <img src="img/movi.png" class="product-img" alt="">
+          <p class="product-name"><a href="movie.html">Movies</a></p>
+      </div>
+      --->
+       <!----
+      <div class="product-card">
+        <img src="img/weather1.png" class="product-img" alt="">
+        <p class="product-name"><a href="tryWeather.html"> Weather App</a></p>
+    </div>
+
+      <div class="product-card">
+        <img src="img/js.png" class="product-img" alt="">
+        <p class="product-name"><a href="himare.html">Himare</a></p>
+    </div>
+           
+            <div class="product-card">
+                <img src="img/js.png" class="product-img" alt="">
+                <p class="product-name"><a href="theory.html">Theory</a></p>
+            </div>
+          
+          <div class="product-card">
+            <img src="img/calculator.png" class="product-img" alt="">
+            <p class="product-name"><a href="comingsoon.html">Coming Soon</a></p>
+        </div>
+      -->
+            <div class="product-card">
+                <img src="img/calculator.png" class="product-img" alt="">
+                <p class="product-name-even"><a href="calculator.html">Calculator</a></p>
+            </div>
+            <!-----
+            <div class="product-card">
+                <img src="img/gameConsole.png" class="product-img" alt="">
+                <p class="product-name"><a href="gameConsole.html">Game<br>Console</a></p>
+            </div>
+           
+            <div class="product-card">
+                <img src="img/rps.png" class="product-img" alt="">
+                <p class="product-name-even"><a href="gameUI.html">Game UI</a></p>
+            </div>
+             --->
+            <div class="product-card">
+                <img src="img/even-odd.png" class="product-img" alt="">
+                <p class="product-name"><a href="evenOdd.html">Even/Odd</a></p>
+            </div>
+            <div class="product-card">
+                <img src="img/diagonal.png" class="product-img" alt="">
+                <p class="product-name-even"><a href="diagonal.html">Diagonals</a></p>
+            </div>
+            <div class="product-card">
+                <img src="img/circle.png" class="product-img" alt="">
+                <p class="product-name"><a href="circle.html">Circle</a></p>
+            </div>
+            <div class="product-card">
+                <img src="img/triangle.png" class="product-img" alt="">
+                <p class="product-name-even"><a href="triangle.html">Triangle</a></p>
+            </div>
+            <div class="product-card">
+                <img src="img/weathe.png" class="product-img" alt="">
+                <p class="product-name-even"><a href="weatherWorks.html">Weather Works</a></p>
+            </div>
+            <div class="product-card">
+                <img src="img/interest.png" class="product-img" alt="">
+                <p class="product-name-even"><a href="interest.html">Interest Rate</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!---Certificate-->
+    <div id="certificates">
+        <div class="certificate-title">
+            <h1>
+                <span class="highlight">My </span> Certificates </span>
+            </h1>
+            <div class="separator"></div>
+        </div>
+        <div class="certificate-container">
+          
+            <div class="box">
+                <div class="imgBx">
+                  <img src="img/TEFL-certificate.png">
+                </div>
+                <div class="content">
+                  <div>
+                    <h2>TEFL </h2>
+                    <p>Certificate to Teach English as a Foreign Language.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            <div class="box">
+              <div class="imgBx">
+                <img src="img/Brainnest certificate.png">
+              </div>
+              <div class="content">
+                <div>
+                  <h2>Brainnest </h2>
+                  <p>Front-End Development.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="imgBx">
+                <img src="img/SheCodes Certificate-1.png">
+              </div>
+              <div class="content">
+                <div>
+                  <h2>SheCodes 1</h2>
+                  <p>The introduction to Front-End Development.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="imgBx">
+                <img src="img/SheCodes-Certificate-2.png">
+              </div>
+              <div class="content">
+                <div>
+                  <h2>SheCodes 2</h2>
+                  <p> Web Development.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="imgBx">
+                <img src="img/SheCodes-Certificate-3.png">
+              </div>
+              <div class="content">
+                <div>
+                  <h2>She Codes 3</h2>
+                  <p>Responsive Web Development.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </div>
+  
+    <!---Certificates--
+    <section class="certificates">
+        <div class="content">
+              <h2>Hera</h2>
+            <div class="grid">
+              <figure class="effect-hera">
+                <img
+                  src="https://tympanus.net/Development/HoverEffectIdeas/img/17.jpg"
+                  alt="img17"
+                />
+                <figcaption>
+                  <h2>Tender <span>Hera</span></h2>
+                  <p>
+                    <a href="#"><i class="fa fa-fw fa-file-pdf-o"></i></a>
+                    <a href="#"><i class="fa fa-fw fa-file-image-o"></i></a>
+                    <a href="#"><i class="fa fa-fw fa-file-archive-o"></i></a>
+                    <a href="#"><i class="fa fa-fw fa-file-code-o"></i></a>
+                  </p>
+                </figcaption>
+              </figure>
+              <figure class="effect-hera">
+                <img
+                  src="https://tympanus.net/Development/HoverEffectIdeas/img/25.jpg"
+                  alt="img25"
+                />
+                <figcaption>
+                  <h2>Tender <span>Hera</span></h2>
+                  <p>
+                    <a href="#">
+                      <i class="fa fa-eye" aria-hidden="true"></i>
+                    </a>
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+        </div>
+    </section>
+    
+    <!---Contact Section-->
+    <section class="contact" id="contact-section">
+      <div class="container mt-5">
+        <h1 class="contact-me">Contact</h1>
+        <form class="row g-3" 
+         action="https://formsubmit.co/tiranamorena@gmail.com"
+         method="POST">
+          <!-- Honeypot -->
+          <input type="text" name="_honey" style="display: none;">
+
+          <!-- Disable Captcha -->
+          <input type="hidden" name="_captcha" value="false">
+
+          <input type="hidden" name="_next" 
+          value="https://morenatirana.github.io/MyPortfolio/messageSent.html" >
+
+          
+          <div class="col-md-6">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" name="name" id="firstName" required>
+          </div>
+          <div class="col-md-6">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" name="Last&nbsp;Name" id="lastName" required>
+          </div>
+          <div class="col-md-8">
+            <label for="emailInfo" class="form-label">E-mail</label>
+            <input type="email" class="form-control" name="email" id="emailInfo" required>
+          </div>
+          <div class="col-md-4">
+            <label for="phoneNumber" class="form-label">Phone Number</label>
+            <input type="text" class="form-control" name="phone" id="phoneNumber" 
+            placeholder="+1 (415) 867-5309">
+          </div>
+          <div class="col-md-12">
+            <label for="comments" class="form-label">Message Content:</label>
+            <textarea class="form-control" id="comments" name="Message,&nbsp;Content" 
+            rows="3" required></textarea>
+          </div>
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+          </div>
+        </form>
+    </div>
+  </section>
+  
+  <div class="social-links d-flex justify-content-center">
+    <a
+      href="https://www.github.com/morenatirana"
+      target="_blank"
+      title="GitHub Profile"
+    >
+      <i class="fab fa-github"></i>
+    </a>
+    <a
+      href="https://www.instragram.com/morena"
+      target="_blank"
+      title="instragram Profile"
+    >
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a
+      href="https://www.twitter.com/morena"
+      target="_blank"
+      title="Twitter Profile"
+    >
+      <i class="fab fa-twitter"></i>
+    </a>
+  </div>
+
+<!---Footer-->
+
+    <footer class="footer-1">
+        <h1 class="footer-heading">
+            <span class="highlight">made with  </span>
+            l❤️ve
+            <span class="highlight"> | by</span>
+            Morena Tirana
+        </h1>
+    </footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+   
+    <!--- Script to Download the CV image-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"></script>
+    <script>
+        function download(){
+            axios({
+                url:'https://i.postimg.cc/FK9nL2zX/CV.png',
+                method:'GET',
+                responseType:'blob'
+            }).then((response) => {
+                const url = window.URL.createObjectURL(new Blob([response.data]))
+                const link = document.createElement('a');
+                link.href = url;
+                link.setAttribute('download', 'CV.png');
+                document.body.appendChild(link);
+                link.click();
+            });
+        }
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" 
+    crossorigin="anonymous">
+  </script>
+
+  <script src="js/app.js"></script>
+    
+</body>
+</html>

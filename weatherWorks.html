@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>Weather App</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: block;
+        margin: 30px auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 90%;
+        justify-content: center;
+        border: 1px solid lightgrey;
+        color: gray;
+        border-radius: 10px;
+      }
+      #city {
+        margin-top: 40px;
+        font-size: 25px;
+      }
+
+      ul li {
+        list-style: none;
+      }
+
+      .units {
+        margin-top: -60px;
+        margin-left: 65px;
+        display: flex;
+      }
+      .temperature {
+        margin: 10px;
+        color: black;
+        font-size: 45px;
+      }
+
+      /*
+.left-box {
+  height: 200px;
+  width: 50%;
+}
+
+.day,
+.weather {
+  font-size: 15px;
+}
+.temperature {
+  margin: 10px;
+  color: black;
+  font-size: 40px;
+}
+.temperature span {
+  font-size: 10px;
+  top: -20px;
+  position: relative;
+  color: gray;
+}
+
+.right-box {
+  text-align: left;
+  position: relative;
+  top: 0;
+  left: 0;
+  font-size: 15px;
+  width: 50%;
+  margin-top: 0px;
+}
+h4 {
+  font-size: 15px;
+}
+.paragraph-right {
+  padding-top: 100px;
+  padding-left: 20px;
+}
+.text-center {
+  border: none;
+}
+.col {
+  border: 1px solid lightgray;
+  color: rgb(68, 67, 67);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: rgb(234, 224, 243);
+}
+.first {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.last {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.col:hover {
+  background-color: darkgrey;
+  color: black;
+}
+*/
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Type a city.."
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm w-100"
+              />
+            </div>
+            <div class="col-3">
+              <button
+                class="btn btn-success w-100"
+                id="current-location-button"
+              >
+                Current
+              </button>
+            </div>
+          </div>
+        </form>
+        <h1 id="city"></h1>
+        <ul>
+          <li id="date"></li>
+          <li id="description"></li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix">
+              <div class="float-left">
+                <span class="temperature" id="temperature"></span
+                ><span class="units">°C</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Challenge 1 : Show Day and Time
+      let now = new Date();
+      let days = [
+        'Sunday',
+        'Monday',
+        'Tueday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday',
+      ];
+      let today = days[now.getDay()];
+      let day = document.querySelector('#date');
+
+      function formatDate(now) {
+        day.innerHTML = `${today} ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+        return day;
+      }
+      formatDate(new Date());
+
+      // Search Input function
+      let form = document.querySelector('#search-form');
+      form.addEventListener('submit', searchButton);
+
+      function searchButton(event) {
+        event.preventDefault();
+        let searchInput = document.querySelector('#city-input');
+        let city = searchInput.value;
+        console.log(city);
+        getCity(city);
+      }
+
+      getCity('New York');
+
+      function getCity(city) {
+        let apiKey = '008333dc06a5d8aa20ef3bb1c406926c';
+        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+        axios.get(apiUrl).then(showTemperature);
+      }
+
+      function showTemperature(response) {
+        let city = document.querySelector('#city');
+        city.innerHTML = response.data.name;
+        console.log(city.innerHTML);
+
+        let description = document.querySelector('#description');
+        description.innerHTML = response.data.weather[0].main;
+        console.log(description.innerHTML);
+
+        let temperature = document.querySelector('#temperature');
+        temperature.innerHTML = Math.round(response.data.main.temp);
+        console.log(temperature.innerHTML);
+
+        let humidity = document.querySelector('#humidity');
+        humidity.innerHTML = response.data.main.humidity;
+        console.log(humidity.innerHTML);
+
+        let wind = document.querySelector('#wind');
+        wind.innerHTML = Math.round(response.data.wind.speed);
+        console.log(wind.innerHTML);
+      }
+
+      let buttonCurrentLocation = document.querySelector(
+        '#current-location-button'
+      );
+      buttonCurrentLocation.addEventListener('click', currentButton);
+
+      function currentButton(event) {
+        event.preventDefault();
+        navigator.geolocation.getCurrentPosition(currentLocation);
+      }
+
+      function currentLocation(position) {
+        let apiKey = '008333dc06a5d8aa20ef3bb1c406926c';
+        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+        axios.get(apiUrl).then(showTemperature);
+      }
+
+      // Display Fahrenheit temperature at click
+      //let temperature = document.querySelector("#temperature");
+      /*
+function convertF(event) {
+  // let fahre = Math.round(temperature.innerHTML * (9/5) +32);
+  let fahre = "66";
+  temperature.innerHTML = `${fahre}`;
+}
+
+let fahrenheit = document.querySelector("#fahrenheit-link");
+fahrenheit.addEventListener("click", convertF);
+
+let celsius = document.querySelector("#celsius-link");
+celsius.addEventListener("click", convertC);
+
+function convertC(event) {
+  let cels = "19";
+  //let cels = Math.round((temperature.innerHTML - 32) * (5 / 9));
+  temperature.innerHTML = `${cels}`;
+}
+*/
+    </script>
+  </body>
+</html>

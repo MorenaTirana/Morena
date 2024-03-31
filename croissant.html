@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Croissant</title>
+
+    <meta
+      name="description"
+      content="Contact croissant.com to learn more about our homemade croissants"
+    />
+
+    <style>
+      * + * {
+        margin-top: 1.5em;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgba(255, 140, 0, 0.08);
+        font-family: 'Helvetica Neue', Helvetica, sans-serif;
+        line-height: 1.7;
+      }
+
+      /* Reset */
+      html,
+      body,
+      div,
+      span,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+
+      article {
+        background-color: transparent;
+        box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+        margin: 0 auto;
+        padding: 0.5em 2.5em;
+        max-width: 1010px;
+      }
+
+      body {
+        background-color: #d5be8b;
+        color: #fff;
+        text-align: center;
+        margin-top: 50px;
+      }
+      .links {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      .links a {
+        text-decoration: none;
+        color: #fff;
+        padding: 20px 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: #aaaaaa;
+        border-radius: 5px;
+      }
+      .links a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        border: 1px solid white;
+      }
+
+      .m-video {
+        background-color: #000000;
+        position: relative;
+        max-width: 1040px;
+      }
+
+      .m-video__video {
+        display: block;
+        width: 100%;
+      }
+
+      p {
+        font-family: cursive;
+        padding: 20px 60px;
+      }
+
+      span {
+        color: black;
+      }
+      .photo {
+        width: 90%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>I ❤️ Croissants 🥐</h1>
+    <article>
+      <div class="m-video js-video">
+        <video
+          class="m-video__video js-video-video"
+          poster="https://www.robsimpson.me/img/bitmap/tutorials/autoplay-html5-video-on-ios-android-and-desktop/showreel-1280.jpg"
+          autoplay
+          loop
+          muted
+          playsinline
+        >
+          <source src="img/croissant-1.mp4" />
+        </video>
+      </div>
+    </article>
+
+    <p>
+      The origin of croissant, the <span>Kipferl</span>, can be dated back to at
+      least the 13th century in Austria, and came in various shapes.The
+      <span>Kipferl</span>
+      can be made plain or with nuts or other fillings (some consider the
+      rugelach a form of <span>Kipferl</span> ). The birth of the croissant
+      itself—that is, its adaptation from the plainer form of
+      <span>Kipferl</span>, before the invention of viennoiseries—can be dated
+      to at least 1839 (some say 1838) when an Austrian artillery officer,
+      August Zang, founded a Viennese bakery (
+      <span>"Boulangerie Viennoise"</span>) at 92, rue de Richelieu in Paris.
+      This bakery, which served Viennese specialties including the
+      <span>Kipferl</span>
+      and the Vienna loaf, quickly became popular and inspired French imitators
+      (and the concept, if not the term, of viennoiserie, a 20th-century term
+      for supposedly Vienna-style pastries).
+    </p>
+    <img src="img/croissant 2.png" class="photo" />
+    <p>
+      The French version of the
+      <span>Kipferl</span> was named for its crescent (croissant) shape and has
+      become a universally identifiable shape across the world. Sylvain Claudius
+      Goy, a French chef, was the first to make croissant with yeast leavened
+      laminated dough. Alan Davidson, editor of the Oxford Companion to Food,
+      found no printed recipe for the present-day croissant in any French recipe
+      book before the early 20th century; the earliest French reference to a
+      croissant he found was among the "fantasy or luxury breads" in Payen's Des
+      substances alimentaires, 1853. However, early recipes for non-laminated
+      croissants can be found in the 19th century and at least one reference to
+      croissants as an established French bread appeared as early as 1850. Zang
+      himself returned to Austria in 1848 to become a press magnate, but the
+      bakery remained popular for some time afterwards, and was mentioned in
+      several works of the time: "This same M. Zank founded around 1830, in
+      Paris, the famous <span>Boulangerie Viennoise </span>" . Several sources
+      praise this bakery's products: "Paris is of exquisite delicacy; and, in
+      particular, the succulent products of the
+      <span>Boulangerie Viennoise</span> "; "which seemed to us as fine as if it
+      came from the Viennes bakery on the rue de Richelieu". By 1869, the
+      croissant was well established enough to be mentioned as a breakfast
+      staple, and in 1872, Charles Dickens wrote (in his periodical All the Year
+      Round) of "the workman's pain de ménage and the soldier's pain de
+      munition, to the dainty croissant on the boudoir table". The puff pastry
+      technique that now characterizes the croissant was already mentioned in
+      the late 17th century, when La Varenne's Le Cuisinier françois gave a
+      recipe for it in the 1680 - and possibly earlier - edition. It was
+      typically used not on its own but for shells holding other ingredients (as
+      in a vol-au-vent). It does not appear to be mentioned in relation to the
+      croissant until the 20th century.
+    </p>
+
+    <div class="links">
+      <a href="index.html" title="Homepage">Homepage</a>
+      <a href="photo.html" title="Photo Page Link">Photo</a>
+      <a href="contact.html" title="Contact Page Link">Contact</a>
+    </div>
+
+    <script>
+      class Video {
+        constructor(video) {
+          this.videoContainer = video;
+          this.video = this.videoContainer.querySelector('.js-video-video');
+          this.playButton = this.videoContainer.querySelector(
+            '.js-video-play-button'
+          );
+          this.pauseButton = this.videoContainer.querySelector(
+            '.js-video-pause-button'
+          );
+
+          this.prefersReducedMotion();
+          this.addEventListeners();
+        }
+
+        prefersReducedMotion() {
+          // If the users browser supports reduced motion and the user has set it to true, remove the autoplay attribute from the video and pause it
+          if (matchMedia('(prefers-reduced-motion)').matches) {
+            this.video.removeAttribute('autoplay');
+            this.pauseVideo();
+          }
+        }
+
+        addEventListeners() {
+          this.playButton.addEventListener('click', () => {
+            this.playVideo();
+            // Focus the pause button so keyboard users can immediately pause the video without having to tab away and back again
+            this.pauseButton.focus();
+          });
+
+          this.pauseButton.addEventListener('click', () => {
+            this.pauseVideo();
+            // Focus the play button so keyboard users can immediately play the video without having to tab away and back again
+            this.playButton.focus();
+          });
+        }
+
+        playVideo() {
+          this.video.play();
+          // Set the play button as pressed so it's hidden and the pause button is displayed instead
+          this.playButton.setAttribute('aria-pressed', 'true');
+          this.pauseButton.setAttribute('aria-pressed', 'false');
+        }
+
+        pauseVideo() {
+          this.video.pause();
+          // Set the pause button as pressed so it's hidden and the play button is displayed instead
+          this.playButton.setAttribute('aria-pressed', 'false');
+          this.pauseButton.setAttribute('aria-pressed', 'true');
+        }
+      }
+
+      // Check if the users browser supports these features
+      const enhance =
+        'querySelector' in document &&
+        'addEventListener' in window &&
+        'classList' in document.documentElement;
+
+      // If the users browser browser supports the features we need, remove the no-enhance class from the html element and execute our video JS
+      if (enhance) {
+        document.documentElement.classList.remove('no-enhance');
+
+        // Find all video molecules and instantiate a new instance of the Video class
+        const videos = document.querySelectorAll('.js-video');
+        Array.from(videos).forEach((video) => {
+          const videoEl = new Video(video);
+        });
+      }
+    </script>
+  </body>
+</html>
