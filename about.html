@@ -669,14 +669,59 @@
  
 
     <!-- home section-->
- 
+    <header>
+        <h2 class="logo">Morena K.Tirana</h2>
+              <div class="toggle"></div>
+    </header>
+            <style>
+                header{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 40px 100px;
+                z-index: 1000;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                }
+              .logo {
+                  display: inline-block;
+                }
+                h2.logo {
+                  /* text-transform: uppercase;*/
+                  cursor: pointer;
+                  font-family: 'Grey Qo', cursive;
+                  font-size: 40px;
+                }
+          
+                .toggle {
+                  position: relative;
+                  width: 60px;
+                  height: 60px;
+                  background: url('img/menu.jpg');
+                  background-repeat: no-repeat;
+                  background-size: 30px;
+                  background-position: center;
+                  cursor: pointer;
+                }
+          
+                .toggle.active {
+                  background: url('img/close.png');
+                  background-repeat: no-repeat;
+                  background-size: 30px;
+                  background-position: center;
+                }
+            </style>
     <section class="home">
+      
+
         <style>
             .home {
             width: 100%;
             min-height: calc(100vh - 60px);
             height: auto;
-            margin-top: 60px;
+            margin-top: 0px;
             padding: 0 10vw;
             display: flex;
             align-items: center;
@@ -686,11 +731,15 @@
             /*background: url(img/gold.jpg);*/
           }
         </style> 
-
+      
         <div class="hero-content">
             <style>
                 .hero-content {
                     width: 100%;
+                  }
+                  .hero-heading{
+                    margin-top:30px;
+                  
                   }
             </style>
            
