@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Morena Tirana | Home Page</title>
+
+    <script src="vara.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Allura&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&family=Great+Vibes&family=Grey+Qo&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        position: relative;
+        height: 100%;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      }
+
+      section {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        z-index: 9;
+      }
+
+      .hero {
+        position: absolute;
+        bottom: 0;
+        z-index: 5;
+        max-width: 360px;
+        filter: contrast(90%);
+        pointer-events: none;
+        margin-bottom: 9%;
+        border-radius: 50%;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        position: relative;
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .title {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-size: 5rem;
+        letter-spacing: 0.3rem;
+        z-index: 5;
+        color: transparent;
+        background-position: 0 0;
+        animation: animated-text 20s linear infinite;
+      }
+
+      @keyframes animated-text {
+        100% {
+          background-position: 200% 0;
+        }
+      }
+
+      .one,
+      .five {
+        -webkit-text-stroke: 1px #fff;
+        background: url(https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/e9d06cb6-2844-49ed-9bde-23d3364b9fa4);
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+
+      .two,
+      .three,
+      .four,
+      .six {
+        -webkit-text-stroke: 1px #fff;
+        background: url(img/white.png);
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+
+      .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+      }
+      .swiper-slide video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+      }
+
+      .container-one {
+        /*   border:1px solid red; */
+        height: 100%;
+        align-items: center;
+        background: transparent;
+        margin: 0;
+        position: absolute;
+      }
+
+      svg {
+        display: block;
+        background-color: transparent;
+        font: 10.5em 'Montserrat';
+        width: 960px;
+        height: 200px;
+        align-items: center;
+        text-align: center;
+        margin: 0 0;
+      }
+
+      .text-copy {
+        fill: none;
+        stroke: white;
+        stroke-dasharray: 6% 29%;
+        stroke-width: 5px;
+        stroke-dashoffset: 0%;
+        animation: stroke-offset 5.5s infinite linear;
+      }
+
+      .text-copy:nth-child(1) {
+        stroke: #fff;
+        animation-delay: -1;
+      }
+
+      .text-copy:nth-child(2) {
+        stroke: #ffffffd7;
+        animation-delay: -2s;
+      }
+
+      .text-copy:nth-child(3) {
+        stroke: #fff;
+        animation-delay: -3s;
+      }
+
+      .text-copy:nth-child(4) {
+        stroke: #ffffffd7;
+        animation-delay: -4s;
+      }
+
+      .text-copy:nth-child(5) {
+        stroke: #eae7e2;
+        animation-delay: -5s;
+      }
+
+      @keyframes stroke-offset {
+        100% {
+          stroke-dashoffset: -35%;
+        }
+      }
+    </style>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Allura&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&family=Great+Vibes&family=Grey+Qo&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Zeyada&display=swap');
+      .container {
+        display: inline-block;
+        z-index: 10;
+        position: absolute;
+        bottom: 5%;
+      }
+      .text {
+        font-size: 2em;
+        letter-spacing: 5px;
+        font-family: 'Zeyada', cursive;
+        font-weight: 600;
+        font-style: normal;
+        border-right: 5px solid;
+        width: 100%;
+        color: #fff;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 2s steps(15), cursor 0.4s step-end infinite alternate;
+      }
+      /* cursor blinking */
+      @keyframes cursor {
+        50% {
+          border-color: transparent;
+        }
+      }
+
+      /* typing effect */
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <img class="hero" src="img/une.png" alt="" />
+
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="container-one">
+              <svg viewBox="0 0 960 300">
+                <symbol id="s-text">
+                  <text text-anchor="middle" x="50%" y="80%">Hello,</text>
+                </symbol>
+
+                <g class="g-ants">
+                  <use xlink:href="#s-text" class="text-copy"></use>
+                  <use xlink:href="#s-text" class="text-copy"></use>
+                  <use xlink:href="#s-text" class="text-copy"></use>
+                  <use xlink:href="#s-text" class="text-copy"></use>
+                  <use xlink:href="#s-text" class="text-copy"></use>
+                </g>
+              </svg>
+            </div>
+            <video src="img/intro.mp4" muted loop autoplay></video>
+            <div class="container">
+              <p class="text">my name is Morena...</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <h1 class="title one">ALBANIA</h1>
+            <img src="img/albania.jpg" alt="" />
+            <div class="container">
+              <p class="text">Made in Albania,</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <h1 class="title two">Italy</h1>
+            <img
+              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/62411bbf-dde9-4654-9298-1fe3e7da2d64"
+              alt=""
+            />
+          </div>
+
+          <div class="swiper-slide">
+            <h1 class="title three">Amsterdam</h1>
+            <img
+              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/b49c729f-65b0-4a2a-baf7-1d9f180df0a6"
+              alt=""
+            />
+          </div>
+
+          <div class="swiper-slide">
+            <h1 class="title four">Saudi Arabia</h1>
+            <img
+              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/c9a61071-c74d-4e8b-966a-6948cdbd9665"
+              alt=""
+            />
+          </div>
+
+          <div class="swiper-slide">
+            <h1 class="title five">Stockholm</h1>
+            <img
+              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/62411bbf-dde9-4654-9298-1fe3e7da2d64"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper('.swiper', {
+        grabCursor: true,
+        speed: 500,
+        effect: 'slide',
+        loop: true,
+        mousewheel: {
+          invert: false,
+          sensitivity: 1,
+        },
+      });
+
+      swiper.enable();
+    </script>
+  </body>
+</html>
