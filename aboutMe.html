@@ -28,23 +28,63 @@
       }
 
       section {
-        position: relative;
+        position: absolute;
+        margin: 0;
         display: flex;
         justify-content: center;
         width: 100%;
         height: 100vh;
         z-index: 9;
+        background: red;
+      }
+
+      .showcase {
+        position: absolute;
+        right: 0;
+        width: 100%;
+        min-height: 100vh;
+        padding: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #111;
+        color: #fff;
+        z-index: 2;
+        transition: 1.5s;
+      }
+
+      .showcase.active {
+        right: 280px;
+      }
+
+      .showcase header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 100px;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
       }
 
       .hero {
         position: absolute;
-        bottom: 0;
+        top: 0;
+        /* bottom: 15%;*/
         z-index: 5;
-        max-width: 360px;
+        max-width: 200px;
         filter: contrast(90%);
         pointer-events: none;
-        margin-bottom: 9%;
         border-radius: 50%;
+      }
+
+      @media (max-width: 798px) {
+        .hero {
+          max-width: 40%;
+          top: 30%;
+        }
       }
 
       .swiper {
@@ -73,7 +113,7 @@
         z-index: 5;
         color: transparent;
         background-position: 0 0;
-        animation: animated-text 20s linear infinite;
+        animation: animated-text 40s linear infinite;
       }
 
       @keyframes animated-text {
@@ -83,20 +123,15 @@
       }
 
       .one,
-      .five {
-        -webkit-text-stroke: 1px #fff;
-        background: url(https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/e9d06cb6-2844-49ed-9bde-23d3364b9fa4);
-        background-clip: text;
-        -webkit-background-clip: text;
-      }
-
+      .five,
       .two,
       .three,
       .four,
       .six {
         -webkit-text-stroke: 1px #fff;
-        background: url(img/white.png);
+        background: url(https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/ba4edde6-822d-437a-88c2-f54392d7a56f);
         background-clip: text;
+        background-color: black;
         -webkit-background-clip: text;
       }
 
@@ -173,11 +208,72 @@
           stroke-dashoffset: -35%;
         }
       }
+
+      .menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .menu ul {
+        position: relative;
+        list-style: none;
+      }
+
+      .menu ul li a {
+        text-decoration: none;
+        font-size: 24px;
+        color: #111;
+      }
+
+      .menu ul li a:hover {
+        color: var(--overlay-color);
+      }
+
+      @media (max-width: 798px) {
+        .showcase,
+        .showcase header {
+          padding: 40px;
+        }
+
+        .text h2 {
+          font-size: 3em;
+        }
+
+        .text h3 {
+          font-size: 2em;
+        }
+      }
+
+      .toggle {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        background: url('img/menu.jpg');
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-position: center;
+        cursor: pointer;
+        z-index: 2;
+      }
+
+      .toggle.active {
+        background: url('img/close.png');
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-position: center;
+      }
     </style>
 
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Allura&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&family=Great+Vibes&family=Grey+Qo&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Zeyada&display=swap');
-      .container {
+      .container,
+      .container-one {
         display: inline-block;
         z-index: 10;
         position: absolute;
@@ -213,9 +309,7 @@
   </head>
 
   <body>
-    <section>
-      <img class="hero" src="img/une.png" alt="" />
-
+    <section class="showcase">
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -224,7 +318,6 @@
                 <symbol id="s-text">
                   <text text-anchor="middle" x="50%" y="80%">Hello,</text>
                 </symbol>
-
                 <g class="g-ants">
                   <use xlink:href="#s-text" class="text-copy"></use>
                   <use xlink:href="#s-text" class="text-copy"></use>
@@ -235,6 +328,7 @@
               </svg>
             </div>
             <video src="img/intro.mp4" muted loop autoplay></video>
+            <img class="hero" src="img/une.png" alt="" />
             <div class="container">
               <p class="text">my name is Morena...</p>
             </div>
@@ -281,7 +375,20 @@
           </div>
         </div>
       </div>
+      <header>
+        <div class="toggle"></div>
+      </header>
     </section>
+
+    <div class="menu">
+      <ul>
+        <li><a href="index1.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
@@ -297,6 +404,16 @@
       });
 
       swiper.enable();
+    </script>
+
+    <script>
+      const menuToggle = document.querySelector('.toggle');
+      const showcase = document.querySelector('.showcase');
+
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        showcase.classList.toggle('active');
+      });
     </script>
   </body>
 </html>
