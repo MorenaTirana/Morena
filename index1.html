@@ -87,6 +87,10 @@
         background-size: 30px;
         background-position: center;
         cursor: pointer;
+        -webkit-transition: 0.6s ease-out;
+        -moz-transition: 0.6s ease-out;
+        transition: 0.6s ease-out;
+        float: left;
       }
 
       .toggle.active {
@@ -96,6 +100,13 @@
         background-position: center;
       }
 
+      :hover {
+        .toggle.active {
+          -webkit-transform: rotateZ(360deg);
+          -moz-transform: rotateZ(360deg);
+          transform: rotateZ(360deg);
+        }
+      }
       .showcase video {
         position: absolute;
         top: 0;
@@ -161,56 +172,6 @@
         letter-spacing: 6px;
       }
 
-      .social {
-        bottom: 40px;
-        z-index: 10;
-        display: inline-block;
-      }
-
-      .social li {
-        list-style: none;
-      }
-
-      .social li a {
-        display: block;
-        /*filter: invert(1);*/
-
-        transform: scale(0.5);
-        transition: 0.5s;
-        color: #fff;
-        font-size: 40px;
-      }
-
-      .social li a:hover {
-        transform: scale(0.5) translateY(-15px);
-      }
-
-      .menu {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 300px;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .menu ul {
-        position: relative;
-        list-style: none;
-      }
-
-      .menu ul li a {
-        text-decoration: none;
-        font-size: 24px;
-        color: #111;
-      }
-
-      .menu ul li a:hover {
-        color: var(--overlay-color);
-      }
-
       @media (max-width: 798px) {
         .showcase,
         .showcase header {
@@ -227,6 +188,7 @@
       }
     </style>
 
+    <!----socials links-->
     <script
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
@@ -244,13 +206,84 @@
       <div class="text">
         <h2>Strive</h2>
         <h3>for Progress,</h3>
-        <p>not success ...</p>
+        <!---- <p>not success ...</p>--->
         <a href="#">Explore</a>
       </div>
+    </section>
 
-      <ul class="social">
+    <div class="menu">
+      <style>
+        .menu {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 200px;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      </style>
+      <ul>
+        <style>
+          .menu ul {
+            position: relative;
+            list-style: none;
+            margin-right: 11%;
+          }
+        </style>
         <li>
+          <a href="index1.html">Home</a>
+
+          <style>
+            .menu ul li a {
+              text-decoration: none;
+              font-size: 24px;
+              color: #111;
+            }
+
+            .menu ul li a:hover {
+              color: var(--overlay-color);
+            }
+          </style>
+        </li>
+        <li><a href="aboutMe.html">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="social">
+        <style>
+          .social {
+            margin-bottom: -120%;
+            right: 40%;
+            /* z-index: 10;*/
+            display: flex;
+            margin-left: -30%;
+          }
+        </style>
+        <li>
+          <style>
+            .social li {
+              list-style: none;
+            }
+          </style>
           <a href="#">
+            <style>
+              .social li a {
+                display: block;
+                /*filter: invert(1);*/
+                transform: scale(0.5);
+                transition: 0.5s;
+                color: #000;
+                font-size: 100px;
+                padding: 5px;
+              }
+
+              .social li a:hover {
+                transform: scale(0.5) translateY(-15px);
+              }
+            </style>
             <i class="fab fa-facebook-f"></i>
             <!---<img src="../img/fb.png" alt="" /> --->
           </a>
@@ -268,18 +301,9 @@
           </a>
         </li>
       </ul>
-    </section>
-
-    <div class="menu">
-      <ul>
-        <li><a href="index1.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
     </div>
 
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
       const menuToggle = document.querySelector('.toggle');
       const showcase = document.querySelector('.showcase');
